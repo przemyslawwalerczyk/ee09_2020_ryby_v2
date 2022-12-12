@@ -1,0 +1,22 @@
+SELECT 
+ id,
+ nazwa,
+ wystepowanie
+FROM ryby
+WHERE styl_zycia = 2
+
+SELECT 
+ akwen,
+ wojewodztwo
+FROM lowisko
+WHERE rodzaj = 2
+OR rodzaj = 3
+
+SELECT 
+ nazwa
+FROM ryby
+JOIN okres_ochronny
+ON okres_ochronny.Ryby_id = ryby.id
+WHERE wymiar_ochronny = 0
+
+CREATE TABLE wedkarze (id INT NOT NULL, imie VARCHAR(30), nazwisko VARCHAR(30), punkty INT)
